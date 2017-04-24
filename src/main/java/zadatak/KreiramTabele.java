@@ -26,13 +26,22 @@ public class KreiramTabele {
             try {
 
                 //Brisem tabele
+                Poruka.linija40();
+                Poruka.text("Brisem sve tabele");
+
                 TableUtils.dropTable(db.getKonekcija(), Skola.class,true);
                 TableUtils.dropTable(db.getKonekcija(), Razred.class,true);
+                Poruka.linija40();
+                Poruka.noviRed();
 
                 //Kreiram tabele
+                Poruka.linija40();
+                Poruka.text("Kreiram tabele");
+
                 TableUtils.createTable(db.getKonekcija(), Razred.class);
                 TableUtils.createTable(db.getKonekcija(), Skola.class);
-
+                Poruka.linija40();
+                Poruka.noviRed();
 
 
 

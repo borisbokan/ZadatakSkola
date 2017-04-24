@@ -66,4 +66,9 @@ public class Razred {
         public void setSkola(Skola skola_fk) {
             this.skola = skola_fk;
         }
+
+
+        public String toString(){
+                return " Razred (" + this.id + " - " + this.oznaka +  " br. ucenika: " +  this.brojUcenika+ ")";
+        }
 }

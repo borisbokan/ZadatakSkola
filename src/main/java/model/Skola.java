@@ -57,4 +57,9 @@ public class Skola {
     public void setRazredi(ForeignCollection<Razred> razredi) {
         this.razredi = razredi;
     }
+
+
+    public String toString(){
+        return " >Skola" + this.id + " - " + this.naziv;
+    }
 }
