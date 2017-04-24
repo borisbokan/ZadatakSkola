@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by borcha on 24.04.17..
  */
-public class MenjamPodake {
+public class MenjamBrisemPodake {
 
 
         private static myDB db = null;
@@ -73,13 +73,21 @@ public class MenjamPodake {
                 }
 
 
+                //Brisem razred gde ima 17 ucenika
+                QueryBuilder<Razred,Integer> upit=DAORazred.queryBuilder();
+                Where where=upit.where().eq(Razred.POLJE_BROJ_UCENIKA,17);
+                Razred razred=(Razred)where.queryForFirst();
+                DAORazred.delete(razred);
 
 
-
-
-
-
-
+                //Prika nakon izmena
+                List<Razred> nakonBrisRaz = DAORazred.queryForAll();
+                Poruka.text("Nakon brisanja razreda sa 17 ucenika");
+                Poruka.linija40();
+                for (Razred ra : nakonBrisRaz) {
+                    Poruka.text(ra.toString() + " " + ra.getSkola().toString());
+                }
+                Poruka.nrlinr();
 
 
             } catch (SQLException e) {
