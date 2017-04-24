@@ -26,6 +26,8 @@ public class PrikaziPodataka {
             DAORazred= DaoManager.createDao(db.getKonekcija(),Razred.class);
 
 
+
+
             List<Razred> razredi=DAORazred.queryForAll();
 
             for (Razred ra : razredi ) {
