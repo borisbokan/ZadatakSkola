@@ -8,7 +8,7 @@ import com.j256.ormlite.table.DatabaseTable;
 /**
  * Created by borcha on 24.04.17..
  */
-@DatabaseTable(tableName = "razred")
+@DatabaseTable(tableName = "skola")
 public class Skola {
 
 
@@ -20,9 +20,8 @@ public class Skola {
     @DatabaseField(columnName = POLJE_NAZIV)
     String naziv;
 
-    @ForeignCollectionField(foreignFieldName = "skola_fk",
-    eager = false)
-    ForeignCollection<Skola> razredi;
+    @ForeignCollectionField(foreignFieldName = "skola")
+    ForeignCollection<Razred> razredi;
 
 
     public Skola(){
@@ -51,11 +50,11 @@ public class Skola {
     }
 
 
-    public ForeignCollection<Skola> getRazredi() {
+    public ForeignCollection<Razred> getRazredi() {
         return razredi;
     }
 
-    public void setRazredi(ForeignCollection<Skola> razredi) {
+    public void setRazredi(ForeignCollection<Razred> razredi) {
         this.razredi = razredi;
     }
 }

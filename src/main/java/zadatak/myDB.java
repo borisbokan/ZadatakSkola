@@ -11,7 +11,7 @@ import java.sql.SQLException;
  */
 public class myDB {
 
-	private static final String dbpath="jdbc:sqlite:AvionRoba.db";
+	private static final String dbpath="jdbc:sqlite:Skola.db";
         private  ConnectionSource conn = null;
 
         public myDB(){

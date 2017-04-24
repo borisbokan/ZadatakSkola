@@ -14,14 +14,14 @@ public class Razred {
         public static final String POLJE_BROJ_UCENIKA="broj_ucenika";
 
         @DatabaseField(generatedId = true)
-        int id;
+        private int id;
         @DatabaseField(columnName = POLJE_OZNAKA)
-        String oznaka;
+        private String oznaka;
         @DatabaseField(columnName = POLJE_BROJ_UCENIKA)
-        int brojUcenika;
+        private int brojUcenika;
 
-        @DatabaseField(foreign = true,foreignAutoRefresh = true,canBeNull = false)
-        Skola skola_fk;
+        @DatabaseField(foreign = true,foreignAutoRefresh = true,canBeNull = true)
+        private Skola skola;
 
 
         public Razred(){
@@ -59,11 +59,11 @@ public class Razred {
             this.brojUcenika = brojUcenika;
         }
 
-        public Skola getSkola_fk() {
-            return skola_fk;
+        public Skola getSkola() {
+            return skola;
         }
 
-        public void setSkola_fk(Skola skola_fk) {
-            this.skola_fk = skola_fk;
+        public void setSkola(Skola skola_fk) {
+            this.skola = skola_fk;
         }
 }
