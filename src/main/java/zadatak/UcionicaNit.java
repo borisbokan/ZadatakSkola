@@ -8,8 +8,9 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Random;
 
-/*
-   * Zadatak: Nakon malog odmora koji traje 1.5 sekunde. Kabinet iz Biologije uvek  slobodan za jedan razred.  Svaki od razreda ulazi u kabinet i ima po jedan cas u istom . Svaki od razreda ima po jedan cas u istom kabinetu. Za vreme nastave u Biologiji ostali imaju pauzu ili su na drugoj nastavi u drugim kabinetima. Cas traje po 4.5 sekundi.
+/**
+ * Author zadatka Bokan Boris
+ *  Zadatak: Nakon malog odmora koji traje 1.5 sekunde. Kabinet iz Biologije uvek  slobodan za jedan razred.  Svaki od razreda ulazi u kabinet i ima po jedan cas u istom .  Za vreme nastave jednog razreda u kabinetu Biologija, ostali imaju pauzu ili su na drugoj nastavi u drugim kabinetima u skoli. 1 cas traje  4.5 sekundi.
    * */
 public class UcionicaNit extends Thread {
 
