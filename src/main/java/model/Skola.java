@@ -20,7 +20,8 @@ public class Skola {
     @DatabaseField(columnName = POLJE_NAZIV)
     String naziv;
 
-    @ForeignCollectionField(foreignFieldName = "skola_fk")
+    @ForeignCollectionField(foreignFieldName = "skola_fk",
+    eager = false)
     ForeignCollection<Skola> razredi;
 
 
