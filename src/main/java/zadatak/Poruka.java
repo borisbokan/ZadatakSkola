@@ -5,17 +5,17 @@ package zadatak;
  */
 public class Poruka {
 
-        public synchronized   static void text(String _sadrzajPoruke){
+        public    static void text(String _sadrzajPoruke){
             System.out.println(_sadrzajPoruke);
         }
 
 
-        public synchronized static void linija40(){
+        public  static void linija40(){
             System.out.println("----------------------------------------");
         }
 
 
-        public synchronized static void noviRed(){
+        public  static void noviRed(){
             System.out.println();
         }
 
@@ -23,7 +23,21 @@ public class Poruka {
     /**
      * Nov red + isprekidana linija + nov red
      */
-    public static void nrlinr(){
+    public  static void nrlinr(){
             System.out.println("\n----------------------------------------\n");
         }
+
+    /**
+     * 1. red ---------------------------------------
+     * 2. red          Naslov text
+     * 3. red ---------------------------------------
+     * @param _naslov
+     */
+    public static void naslov(String _naslov){
+            System.out.println("------------------------------------------");
+            System.out.println(_naslov);
+            System.out.println("------------------------------------------");
+        }
+
+
 }
